@@ -1,0 +1,22 @@
+{% extends 'User/nav.html' %}
+
+{% block content %}
+<div class="container">
+  <br>
+<h2>List of categories :</h2>
+<div class="row">
+{% for category in category_list %}
+<div class="col-md-4">
+<div class="card" style="width:350px;margin:10px;">
+    <img class="card-img-top" src="{{ category.image.url }}/" alt="{{category.name}} image" style="width:100%;height:300px;">
+    <div class="card-body">
+      <h4 class="card-title">{{category.name}}</h4>
+      <a href="/User/{{category.id}}/" class="btn btn-primary">Books</a>
+    </div>
+  </div>
+  </div>
+{% endfor %}
+</div>
+</div>
+
+{% endblock %}

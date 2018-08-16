@@ -1,0 +1,14 @@
+{% extends 'User/nav.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Add books: </h1>
+    <div class="row" style="margin:20px;">
+<form method="post" enctype="multipart/form-data">
+   {% csrf_token %}
+   {{ form.as_p }}
+   <button type="submit">Save</button>
+ </form>
+</div>
+</div>
+ {% endblock %}
